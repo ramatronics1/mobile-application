@@ -14,7 +14,7 @@ const OrderDisplay = ({ route }) => {
 
   const fetchOrders = async () => {
   try {
-    const response = await axios.get(`http://192.168.1.44:5000/fetchOrders/${hotelId}`);
+    const response = await axios.get(`http://192.168.29.42:5000/fetchOrders/${hotelId}`);
     if (response.data) {
       const { nonAcceptedOrder, pops } = response.data; // Corrected variable name
       setOrders(nonAcceptedOrder); // Set nonAcceptedOrder instead of nonAcceptedOrders
